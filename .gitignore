@@ -1,7 +1,21 @@
-# Android/Gradle
+# Gradle
 .gradle/
-local.properties
-*.iml
-.idea/
 build/
+*.log
+*.lock
+
+# Local configuration
+local.properties
+
+# IntelliJ/Android Studio
+.idea/
+*.iml
+
+# Mac/Windows system files
 .DS_Store
+Thumbs.db
+
+# Misc
+*.bin
+*.class
+*.swp
