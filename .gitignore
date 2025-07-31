@@ -1,0 +1,10 @@
+# Ignore Android Studio settings
+.idea/
+*.iml
+
+# Ignore build outputs
+/build/
+/app/build/
+
+# Misc
+*.log
