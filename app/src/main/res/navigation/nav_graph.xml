@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentHomeChooseOccasion"
+        android:label="activity_main"
+        tools:layout="@layout/layout_home_choose_occasion">
+        <action
+            android:id="@+id/action_main_to_birthday"
+            app:destination="@id/birthdayFragment" />
+        <action
+            android:id="@+id/action_main_to_anniversary"
+            app:destination="@id/anniversaryFragment" />
+        <action
+            android:id="@+id/action_main_to_festivalsList"
+            app:destination="@id/festivalsListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/birthdayFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentBirthdayTheme"
+        android:label="birthday_theme"
+        tools:layout="@layout/layout_birthday_theme" />
+
+    <fragment
+        android:id="@+id/anniversaryFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentAnniversaryTheme"
+        android:label="anniversary_theme"
+        tools:layout="@layout/layout_anniversary_theme" />
+
+    <fragment
+        android:id="@+id/festivalsListFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentFestivalListFragment"
+        android:label="festivals_list"
+        tools:layout="@layout/layout_anniversary_theme" />
+</navigation>
