@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:text="RAKSHA BANDHAN"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <!-- <TextView
+         android:id="@+id/text_language"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Language"
+         android:textColor="#3A57E8"
+         android:textSize="14sp"
+         android:layout_gravity="end"
+         android:paddingTop="4dp" />-->
+
+    <LinearLayout
+        android:id="@+id/template_card"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/dashed_boarder"
+        android:backgroundTint="#FFFFC5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_gift_box" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy Rakhi"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_choose_template"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#696D7E"
+        android:text="CHOOSE TEMPLATE"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/theme_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:padding="8dp">
+
+        <!-- Theme 1: Default Theme -->
+        <LinearLayout
+            android:id="@+id/default_theme"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/dashed_boarder"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_theme1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default Theme"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Theme 2: Customized Theme -->
+        <LinearLayout
+            android:id="@+id/customized_theme"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/dashed_boarder"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_theme2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Own_Customization"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Theme 3: Picture Theme -->
+        <LinearLayout
+            android:id="@+id/picture_theme"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/dashed_boarder"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_theme3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picture_theme"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Theme 4: Picture + Customized -->
+        <LinearLayout
+            android:id="@+id/picture_customized_theme"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/dashed_boarder"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_theme4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picture Customiztion"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+    </GridLayout>
+
+
+</LinearLayout>
+
+
+    <!-- Other buttons: Picture Wish, Share Wish, Customized Wish, Download Wish -->

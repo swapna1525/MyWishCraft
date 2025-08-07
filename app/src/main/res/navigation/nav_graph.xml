@@ -9,32 +9,64 @@
         android:name="com.androidprojects.mywishcraft.presentation.FragmentHomeChooseOccasion"
         android:label="activity_main"
         tools:layout="@layout/layout_home_choose_occasion">
-        <action
-            android:id="@+id/action_main_to_birthday"
-            app:destination="@id/birthdayFragment" />
-        <action
-            android:id="@+id/action_main_to_anniversary"
-            app:destination="@id/anniversaryFragment" />
+
         <action
             android:id="@+id/action_main_to_festivalsList"
             app:destination="@id/festivalsListFragment" />
+        <action
+            android:id="@+id/action_main_to_everyDayWishesList"
+            app:destination="@id/everyDayWishesListFragment" />
+        <action
+            android:id="@+id/action_main_to_chooseTheme"
+            app:destination="@id/chooseThemeFragment" />
+
     </fragment>
 
     <fragment
-        android:id="@+id/birthdayFragment"
-        android:name="com.androidprojects.mywishcraft.presentation.FragmentBirthdayTheme"
-        android:label="birthday_theme"
-        tools:layout="@layout/layout_birthday_theme" />
+        android:id="@+id/festivalsListFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FestivalListFragment"
+        android:label="festivals_list"
+        tools:layout="@layout/layout_festival_list">
+
+        <action
+            android:id="@+id/actionFestivalList_to_chooseTheme"
+            app:destination="@id/chooseThemeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/everyDayWishesListFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentEveryDayWishesList"
+        android:label="evert_day_wishes_list"
+        tools:layout="@layout/layout_every_day_wishes_list">
+        <action
+            android:id="@+id/actionFestivalList_to_chooseTheme"
+            app:destination="@id/chooseThemeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseThemeFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentChooseTheme"
+        android:label="choose_theme"
+        tools:layout="@layout/layout_choose_theme">
+        <argument
+            android:name="festivalName"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionChooseTheme_to_defafultTheme"
+            app:destination="@+id/defaultThemeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/defaultThemeFragment"
+        android:name="com.androidprojects.mywishcraft.presentation.FragmentDefaultTheme"
+        android:label="default_theme"
+        tools:layout="@layout/layout_default_theme" />
 
     <fragment
         android:id="@+id/anniversaryFragment"
         android:name="com.androidprojects.mywishcraft.presentation.FragmentAnniversaryTheme"
         android:label="anniversary_theme"
-        tools:layout="@layout/layout_anniversary_theme" />
-
-    <fragment
-        android:id="@+id/festivalsListFragment"
-        android:name="com.androidprojects.mywishcraft.presentation.FragmentFestivalListFragment"
-        android:label="festivals_list"
         tools:layout="@layout/layout_anniversary_theme" />
 </navigation>

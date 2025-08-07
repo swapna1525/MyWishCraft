@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.navigation.safe.args)
 }
 
 android {
@@ -48,8 +49,11 @@ dependencies {
     implementation(libs.androidx.cardview)
     implementation( libs.androidx.navigation.fragment.ktx.v277)
     implementation (libs.androidx.navigation.ui.ktx.v277)
+    implementation (libs.androidx.appcompat.v161) 
 
-    
+
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

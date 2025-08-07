@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,9 +26,12 @@ class FragmentHomeChooseOccasion : Fragment() {
 
     private fun setUpViews(view: View) {
         val occasion = listOf(
+            OccasionsList("Festivals", R.drawable.ic_gift_box),
+            OccasionsList("Every Day Wishes", R.drawable.ic_gift_box),
             OccasionsList("Birthday", R.drawable.ic_gift_box),
             OccasionsList("Anniversary", R.drawable.ic_gift_box),
-            OccasionsList("Festivals", R.drawable.ic_gift_box)
+          //  OccasionsList("Life Events", R.drawable.ic_gift_box),
+           // OccasionsList("Others", R.drawable.ic_gift_box)
         )
 
         val recyclerViewList = view.findViewById<RecyclerView>(R.id.rv_occasions)
@@ -41,9 +43,11 @@ class FragmentHomeChooseOccasion : Fragment() {
                 val navController = findNavController()
 
                 when (selectedOccasion.occasionName) {
-                    "Birthday" -> navController.navigate(R.id.action_main_to_birthday)
-                    "Anniversary" -> navController.navigate(R.id.action_main_to_anniversary)
-                    else -> navController.navigate(R.id.action_main_to_festivalsList)
+                    "Festivals" -> navController.navigate(R.id.action_main_to_festivalsList)
+                    "Birthday" -> navController.navigate(R.id.action_main_to_chooseTheme)
+                    "Anniversary" -> navController.navigate(R.id.action_main_to_chooseTheme)
+                  //  "Life Events" -> navController.navigate(R.id.action_main_to_anniversary)
+                    else -> navController.navigate(R.id.action_main_to_everyDayWishesList)
                 }
             }
         )
